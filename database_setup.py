@@ -7,12 +7,16 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 class Restaurant(Base):
+    # define the table name
     __tablename__ = 'restaurant'
+    # define the columns of the table
     name = Column(String(80), nullable = False)
     id = Column(Integer, primary_key = True)
 
 class MenuItem(Base):
+    # define the table name
     __tablename__ = 'menu_item'
+    # define the columns of the table
     name = Column(String(80), nullable = False)
     id = Column(Integer, primary_key = True)
     course = Column(String(250))
