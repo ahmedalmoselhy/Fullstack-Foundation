@@ -19,7 +19,7 @@ class WebServerHandler(BaseHTTPRequestHandler):
 
 def main():
     try:
-        port = 8080
+        port = 8000
         server = HTTPServer(('', port), WebServerHandler)
         print ("Web Server running on port %s" % port)
         server.serve_forever()
